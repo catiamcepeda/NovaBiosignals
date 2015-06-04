@@ -15,6 +15,6 @@ Using the Cordova Plugin
 -------------------------------------
 
 This Plugin is available here:
-<https://github.com/GTelo/NovaBiosignals/bioPLUX/XDK/Cordova-Plugin>
+<https://github.com/GTelo/NovaBiosignals/tree/master/bioPLUX/XDK/Cordova-Plugin>
 
 
