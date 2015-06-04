@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns:android="http://schemas.android.com/apk/res/android"
+	id="com.plux.cordova.bioplux"
+	version="0.1">
+
+	<name>BioPlux</name>
+
+	<description>
+		Allows connection and aquisition from a bioPlux device via JavaScript.
+	</description>
+
+	<engines>
+		<engine name="cordova" version=">=2.6.0" />
+	</engines>
+
+	<platform name="android">
+
+		<config-file target="res/xml/config.xml" parent="/*">
+			<feature name="BioPlux">
+				<param name="android-package" value="com.plux.cordova.bioplux.BioPluxPlugin" />
+			</feature>
+		</config-file>
+
+		<config-file target="AndroidManifest.xml" parent="/manifest">
+    		<uses-permission android:name="android.permission.BLUETOOTH" />
+    		<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+		</config-file>
+
+		<js-module src="www/bioplux.js" name="bioplux">
+			<clobbers target="bioplux" />
+		</js-module>
+
+		<source-file src="src/android/BioPluxPlugin.java" target-dir="src/com/plux/cordova/bioplux" />
+		<source-file src="src/android/BioPluxSimpleService.java" target-dir="src/com/plux/cordova/bioplux" />
+		<!--<source-file src="src/android/IData.java" target-dir="src/com/plux/cordova/bioplux" />-->
+		<source-file src="src/android/IConnection.java" target-dir="src/com/plux/cordova/bioplux" />
+		<source-file src="src/android/BPException.java" target-dir="src/com/plux/cordova/bioplux" />
+		<source-file src="src/android/BPErrorTypes.java" target-dir="src/com/plux/cordova/bioplux" />
+		<source-file src="src/android/BluetoothConnection.java" target-dir="src/com/plux/cordova/bioplux" />
+		<source-file src="src/android/DeviceFile.java" target-dir="src/com/plux/cordova/bioplux" />
+		<source-file src="src/android/DeviceSimpleFile.java" target-dir="src/com/plux/cordova/bioplux" />
+		<source-file src="src/android/DeviceTest.java" target-dir="src/com/plux/cordova/bioplux" />
+		<source-file src="src/android/DeviceBluetooth.java" target-dir="src/com/plux/cordova/bioplux" />
+		<source-file src="src/android/Device.java" target-dir="src/com/plux/cordova/bioplux" />
+		<source-file src="src/android/Constants.java" target-dir="src/com/plux/cordova/bioplux" />
+		<source-file src="src/android/BluetoothError.java" target-dir="src/com/plux/cordova/bioplux" />
+
+	</platform>
+
+</plugin>

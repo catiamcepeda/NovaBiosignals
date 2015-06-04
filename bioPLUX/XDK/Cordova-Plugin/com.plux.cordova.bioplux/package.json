@@ -1,0 +1,11 @@
+{
+  "name": "cordova-bioplux-plugin",
+  "version": "0.0.1",
+  "description": "Simple access to Android bioPLUX API for Cordova.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GTelo/NovaBiosignals.git"
+  },
+  "author": "GTelo",
+  "license": "MIT"
+}
